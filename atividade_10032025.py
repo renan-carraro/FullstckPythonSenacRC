@@ -48,6 +48,16 @@ print("a temperatura de: ", + F)
 
 ###
 
+# Verificação de Números Pares e Ímpares:
+#Declare uma variável numero com um valor inteiro. Use estruturas condicionais para verificar se o número é par ou ímpar e imprima o resultado.'''
+
+numero = 7
+if numero % 2 == 0:
+    print("O número é par.")
+else:
+    print("O número é ímpar.")
+
+
 #Cálculo de Frete com Base no Peso Declare uma variável peso com o peso de um pacote em kg. Calcule o frete com base nas seguintes regras:
 
 peso= int(input(qual o peso do pacote: ))
