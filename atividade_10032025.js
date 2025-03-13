@@ -52,10 +52,10 @@ if (numero % 2 === 0) {
 let peso2 = 8;
 let frete;
 if (peso2 <= 5) {
+    frete = 10; //
+}else if (peso2 > 5 && peso2 <= 10) {
     frete = 20;
-} else if (peso2 > 5 && peso2 <= 10) {
-    frete = 35;
-} else {
-        frete = 50; // Frete para pacotes acima de 10 kg
+}else {
+        frete = 30; // Frete para pacotes acima de 10 kg
     }
     console.log("O valor do frete é: R$ " + frete);
