@@ -1,6 +1,6 @@
 #Cálculo de Desconto em uma Loja Declare duas variáveis, preco e desconto, com valores 150.0 e 20, respectivamente. Calcule o preço final após aplicar o desconto e imprima o resultado.
-preco = 150.0
-desconto = 20
+preco = float(input("digite seu peso: "))
+desconto =float(input("digite seu desconte: "))
 preco_final= preco-desconto
 print("preço:",preco_final )
 
@@ -42,10 +42,7 @@ else:
  
 #Conversão de Temperatura Declare uma variável celsius com um valor de temperatura em graus Celsius. Converta a temperatura para Fahrenheit usando a fórmula: F = (C * 9/5) + 32. Imprima o resultado.
 
-C=int(input("A temperatura mediada: "))
-F =(C * 9/ 5) + 32 
-print("a temperatura de: ", + F)
-
+7
 ###
 
 # Verificação de Números Pares e Ímpares:
