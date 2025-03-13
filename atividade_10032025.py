@@ -8,8 +8,8 @@ print("preço:",preco_final )
 
 #Cálculo de IMC (Índice de Massa Corporal) Declare duas variáveis, peso e altura, com valores 70 e 1.75, respectivamente. Calcule o IMC usando a fórmula: IMC = peso / (altura ** 2). Imprima o resultado.
 
-peso = 70
-altura = 1.75
+peso = float(input("seu peso: "))
+altura =float(input("sua altura: "))
 valor = peso / (altura ** 2)
 print("o valor",valor)
 
@@ -41,14 +41,17 @@ else:
 ###
  
 #Conversão de Temperatura Declare uma variável celsius com um valor de temperatura em graus Celsius. Converta a temperatura para Fahrenheit usando a fórmula: F = (C * 9/5) + 32. Imprima o resultado.
+c =float(input("temperatura em celsius: "))
+f= (c * 9/2) +32
+print("a temperatura em fahrenheit é: ", f)
 
-7
-###
+
+##
 
 # Verificação de Números Pares e Ímpares:
 #Declare uma variável numero com um valor inteiro. Use estruturas condicionais para verificar se o número é par ou ímpar e imprima o resultado.'''
 
-numero = 7
+numero =float(input("digite um numero:"))
 if numero % 2 == 0:
     print("O número é par.")
 else:

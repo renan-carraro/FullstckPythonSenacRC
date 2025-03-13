@@ -8,3 +8,11 @@ for letra in lista_alunospython:
 
 for i in range (lista_alunospython):
     print(lista_alunospython[i])
+
+    #alunopython = "andrei"
+for i in alunopython:
+    print (i)
+
+
+    for i in range (1,6):
+        print (i)
