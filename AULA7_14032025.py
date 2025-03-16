@@ -18,3 +18,12 @@ for i in range (numero2,1,11):
     numero3 = int(input("Digite um número: "))
 for i in range(1, 11):
     print(f"{numero3} x {i} = {numero3 * i}")
+######
+numero3= int(input("digite um numero fatorial: "))
+f=1 #fatorial
+c=1#contador
+while c <= numero3:
+    f*=c
+    c+=1
+print(f"O fatorial do {numero3} é{f}")
+#######

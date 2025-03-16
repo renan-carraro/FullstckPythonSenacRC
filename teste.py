@@ -1,3 +1,7 @@
-numero = int(input("Digite um número: "))
-for i in range(1, 11):
-    print(f"{numero} x {i} = {numero * i}")
+palavra=input("digite uma palavra pra verificar ser é um palindromo: ")
+palavra= palavra.lower().replace("","")
+inverso = palavra[::-1]
+if palavra ==inverso:
+    print("é um palindromo")
+else:
+    print("não é um palindromo")
