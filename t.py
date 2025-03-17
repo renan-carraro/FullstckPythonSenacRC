@@ -1,27 +1,19 @@
 import turtle
 
-# Configuração da tela
+# Configurando o cenário
 tela = turtle.Screen()
-tela.bgcolor("lightblue")
-tela.title("Criando um Gato")
+tela.bgcolor("white")
+tela.title("Desenhando com Python")
 
-# Criando o "gato"
-gato = turtle.Turtle()
-gato.shape("circle")  # Forma personalizada para o corpo do gato
-gato.color("gray")    # Cor do corpo
-gato.speed(5)
+# Criando a "tartaruga"
+desenhista = turtle.Turtle()
+desenhista.shape("turtle")
+desenhista.speed(3)
 
-# Adicionando movimento do "gato"
-for _ in range(4):  
-    gato.forward(100)  # Anda para frente
-    gato.left(90)      # Gira para a esquerda
-
-# Adicionando a cauda
-gato.penup()
-gato.goto(-50, 50)  # Movendo a tartaruga para outra posição
-gato.pendown()
-gato.color("black")
-gato.forward(50)
+# Desenhando um quadrado
+for _ in range(4):
+    desenhista.forward(100)  # Move para frente
+    desenhista.right(90)     # Gira 90 graus para a direita
 
 # Finaliza o desenho
-tela.mainloop()
+turtle.done()

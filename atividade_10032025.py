@@ -60,8 +60,7 @@ else:
 
 #Cálculo de Frete com Base no Peso Declare uma variável peso com o peso de um pacote em kg. Calcule o frete com base nas seguintes regras:
 
-peso= int(input(qual o peso do pacote: ))
-
+peso = int( input("qual o peso do pacote: "))  
 if peso <= 1:
     frete= 10.00
 elif 1 < peso <= 5:

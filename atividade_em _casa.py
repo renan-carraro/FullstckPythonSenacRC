@@ -21,3 +21,14 @@ if palavra ==inverso:#pra ver ser a palavra ditada é igual ao inverso ex:arara
     print("é um palindromo")
 else:
     print("não é um palindromo")
+#######
+
+P = float(input("Digite o valor principal (P): "))
+r = float(input("Digite a taxa de juros anual (r) em decimal (por exemplo, 0.05 para 5%): "))
+t = float(input("Digite o tempo em anos (t): "))
+M = P * (1 + r * t) #formula
+print(f"O montante final após {t} anos será: {M:.2f}")
+######
+numero=int(input("digito um  numero inteiro: "))
+digitos = len(str(numero))
+print(f"o numero {numero} possui {digitos} digitos: ")
