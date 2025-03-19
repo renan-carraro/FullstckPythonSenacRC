@@ -1,5 +1,5 @@
-let numero = parseint(prompt("digita o valor da sua contagem:"));
-for ( let i = numero; i >= 0 ; i--){
+let numero0 = parseint(prompt("digita o valor da sua contagem:"));
+for ( let i = numero0; i >= 0 ; i--){
     console.log(i);
 }
 //
