@@ -34,3 +34,20 @@ rl.question("Digite o seu peso: ", (peso) => {
         rl.close();
     });
 });
+//
+AULA 9 - 19/03/2025
+
+function calcularMedia() {
+    let soma = 0;
+    for (let i = 0; i < 4; i++) {
+        let nota = parseFloat(prompt(`Digite a ${i + 1}ª nota:`));
+        soma += nota;
+    }
+    let media = soma / 4;
+    console.log("Média:", media);
+    if (media >= 7) {
+        console.log("Aprovado");
+    } else {
+        console.log("Reprovado");
+    }
+}
