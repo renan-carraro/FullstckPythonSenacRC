@@ -1,3 +1,4 @@
+const { read } = require('fs');
 const readline = require('readline');
 
 const rl = readline.createInterface({
@@ -35,10 +36,9 @@ rl.question("Digite a primeira nota:", (nota1) => {
     })
 });
 //
-// Importa o módulo 'readline' para ler entradas do usuário
 const readline = require('readline');
 
-// Cria uma interface para ler entradas e saídas
+// interface para ler entradas e saídas
 const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout
@@ -51,7 +51,7 @@ function somaNumerosPares(inicio, fim) {
     // Percorre o intervalo de início até o fim
     for (let i = inicio; i <= fim; i++) {
         // Verifica se o número é par
-        if (i % 2 === 0) {
+        if (i % 2 === 0) { //%=a modulo não percentual
             soma += i;
         }
     }
@@ -75,3 +75,31 @@ rl.question("Digite o número de início do intervalo: ", (inicio) => {
         rl.close();
     });
 });
+//
+function verificarPalidromo(){
+    let textoInformado = texto.replace(/ /g,"").toLowerCase()
+    const textoReverso = textoInformado.split("").reversr().join("");
+    if ( texto === textoReverso){
+        console.log("É palindromo");
+    }else {
+        console.log("Nãp é um palindromo");
+    }
+}
+//
+function calculorjurosimples(){
+    let p= parseFloat(input("Digite o valor principal (P): "));
+    let r = parseFloat(input("Digite a taxa de juros anual (r) em decimal (por exemplo, 0.05 para 5%): "));
+    let t = parseFloat(input("Digite o tempo em anos (t): "));
+    let M = P * (1 + r * t);
+    console.log("montante final:",M);
+}
+//
+function contarDigitos() {
+    let numero = prompt ("digite um número inteiro positivo:");
+    if (/^\d+$/.test(numero) ) {// isdigit(um teste pra não acabar com seu coidado codigo)GRAVAR***(/^\d+$/.test(variavel))
+        console.log("número de digitos:",numero.length);
+    } else{
+        console.log("entrada iválida.Digite um número inteiro positivo");
+    }
+}
+//
