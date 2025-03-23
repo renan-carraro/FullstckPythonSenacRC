@@ -1,182 +1,64 @@
-// Criando duas matrizes 3x3
-const matrizA = [
-    [1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 9]
-  ];
-  
-  const matrizB = [
-    [9, 8, 7],
-    [6, 5, 4],
-    [3, 2, 1]
-  ];
-  
-  // Exibindo as matrizes no console
-  console.log("Matriz A:", matrizA);
-  console.log("Matriz B:", matrizB);
-  
-  // Soma das matrizes
-  const soma = matrizA.map((linha, i) =>
-    linha.map((valor, j) => valor + matrizB[i][j])
-  );
-  console.log("Soma das matrizes:", soma);
-  
-  // Multiplicação das matrizes
-  const multiplicacao = Array(3).fill(0).map(() => Array(3).fill(0)); // Matriz 3x3 zerada
-  for (let i = 0; i < 3; i++) {
-    for (let j = 0; j < 3; j++) {
-      for (let k = 0; k < 3; k++) {
-        multiplicacao[i][j] += matrizA[i][k] * matrizB[k][j];
-      }
-    }
-  }
-  console.log("Multiplicação das matrizes:", multiplicacao);
-
-  ///// minha base//////
-
-
-  Passo 1: Criando as matrizes
-As matrizes são representadas como arrays de arrays em JavaScript. Por exemplo:
-
-javascript
-const matrizA = [
-  [1, 2, 3],
-  [4, 5, 6],
-  [7, 8, 9]
+const tabuleiro = [
+  ["", "", ""],
+  ["", "", ""],
+  ["", "", ""]
 ];
-Aqui, matrizA é uma matriz 
-3
-×
-3
-, onde:
 
-A primeira linha contém os números 1, 2, 3.
-
-A segunda linha contém os números 4, 5, 6.
-
-E assim por diante.
-
-Passo 2: Exibindo as matrizes
-Usamos o console.log para exibir as matrizes no console do navegador ou no terminal:
-
-javascript
-console.log("Matriz A:", matrizA);
-console.log("Matriz B:", matrizB);
-Passo 3: Soma das matrizes
-Para somar duas matrizes, percorremos cada elemento de uma matriz e somamos com o correspondente da outra matriz. Isso é feito com o método map:
-
-javascript
-const soma = matrizA.map((linha, i) =>
-  linha.map((valor, j) => valor + matrizB[i][j])
-);
-O que acontece aqui:
-
-map percorre cada linha da matriz.
-
-i representa o índice da linha, e j representa o índice da coluna.
-
-A soma é feita elemento por elemento, como 
-𝐴
-[
-0
-]
-[
-0
-]
-+
-𝐵
-[
-0
-]
-[
-0
-]
-, 
-𝐴
-[
-0
-]
-[
-1
-]
-+
-𝐵
-[
-0
-]
-[
-1
-]
- e assim por diante.
-
-Resultado: Uma nova matriz que contém a soma elemento por elemento.
-
-Passo 4: Multiplicação das matrizes
-Aqui as coisas ficam mais complexas! Para multiplicar duas matrizes, aplicamos a regra:
-
-𝐶
-[
-𝑖
-]
-[
-𝑗
-]
-=
-∑
-𝑘
-=
-0
-𝑛
-𝐴
-[
-𝑖
-]
-[
-𝑘
-]
-×
-𝐵
-[
-𝑘
-]
-[
-𝑗
-]
-Isso significa que o elemento na posição 
-𝑖
-,
-𝑗
- da matriz resultante é a soma dos produtos dos elementos correspondentes da linha de 
-𝐴
- e da coluna de 
-𝐵
-.
-
-No código:
-
-javascript
-const multiplicacao = Array(3).fill(0).map(() => Array(3).fill(0));
-for (let i = 0; i < 3; i++) {
-  for (let j = 0; j < 3; j++) {
-    for (let k = 0; k < 3; k++) {
-      multiplicacao[i][j] += matrizA[i][k] * matrizB[k][j];
-    }
-  }
+// oq vai aparecer no tabuleiro
+function exibirTabuleiro() {
+  console.log(tabuleiro.map(row => row.join(" | ")).join("\n---------\n"));
 }
-O que está acontecendo:
 
-Criamos uma matriz 3x3 inicializada com zeros.
+// Fverificar se há um vencedor
+function verificarVencedor() {
+  // Verifica linhas, colunas e diagonais
+  for (let i = 0; i < 3; i++) {
+      if (tabuleiro[i][0] === tabuleiro[i][1] && tabuleiro[i][1] === tabuleiro[i][2] && tabuleiro[i][0] !== "") {
+          return tabuleiro[i][0]; // Linha vencedora
+      }
+      if (tabuleiro[0][i] === tabuleiro[1][i] && tabuleiro[1][i] === tabuleiro[2][i] && tabuleiro[0][i] !== "") {
+          return tabuleiro[0][i]; // Coluna vencedora
+      }
+  }
+  if (tabuleiro[0][0] === tabuleiro[1][1] && tabuleiro[1][1] === tabuleiro[2][2] && tabuleiro[0][0] !== "") {
+      return tabuleiro[0][0]; // Diagonal principal
+  }
+  if (tabuleiro[0][2] === tabuleiro[1][1] && tabuleiro[1][1] === tabuleiro[2][0] && tabuleiro[0][2] !== "") {
+      return tabuleiro[0][2]; // Diagonal secundária
+  }
+  return null; // Sem vencedor
+}
 
-Usamos três loops:
+// Função principal para jogar o jogo
+function jogar() {
+  let jogadorAtual = "X";
+  let jogadas = 0;
 
-O primeiro (i) percorre as linhas da matriz resultante.
+  while (jogadas < 9) {
+      exibirTabuleiro();
+      const linha = prompt(`Jogador ${jogadorAtual}, escolha a linha (0, 1 ou 2):`);
+      const coluna = prompt(`Jogador ${jogadorAtual}, escolha a coluna (0, 1 ou 2):`);
 
-O segundo (j) percorre as colunas da matriz resultante.
+      if (tabuleiro[linha][coluna] === "") {
+          tabuleiro[linha][coluna] = jogadorAtual;
+          jogadas++;
 
-O terceiro (k) percorre os elementos da linha de 
-𝐴
- e da coluna de 
-𝐵
- para realizar a soma dos produtos.
+          const vencedor = verificarVencedor();
+          if (vencedor) {
+              exibirTabuleiro();
+              console.log(`Parabéns, jogador ${vencedor}! Você venceu!`);
+              return;
+          }
 
-O resultado final é a matriz produto.
+          jogadorAtual = jogadorAtual === "X" ? "O" : "X";
+      } else {
+          console.log("Essa posição já está ocupada. Escolha outra.");
+      }
+  }
+
+  exibirTabuleiro();
+  console.log("Empate! O jogo terminou sem um vencedor.");
+}
+
+// Executa o jogo
+jogar();
