@@ -1,0 +1,85 @@
+/* Estilização geral */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* Cabeçalho */
+.header {
+    text-align: center;
+    background-color: #007BFF;
+    color: white;
+    padding: 20px 0;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+.header nav {
+    margin-top: 10px;
+}
+
+.header nav a {
+    text-decoration: none;
+    color: white;
+    margin: 0 15px;
+    font-size: 1.2em;
+}
+
+.header nav a:hover {
+    text-decoration: underline;
+}
+
+/* Conteúdo principal */
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.img-container {
+    width: 30%;
+    text-align: center;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    transition: transform 0.2s;
+}
+
+.img-container:hover {
+    transform: scale(1.05);
+}
+
+.img-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.img-container p {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 0;
+    margin-top: 20px;
+}
