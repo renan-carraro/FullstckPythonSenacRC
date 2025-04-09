@@ -3,8 +3,8 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #519396;
+    color: #0f43a3;
 }
 
 .container {
@@ -16,7 +16,7 @@ body {
 .header {
     text-align: center;
     background-color: #007BFF;
-    color: white;
+    color: rgb(214, 218, 20);
     padding: 20px 0;
 }
 
@@ -31,7 +31,7 @@ body {
 
 .header nav a {
     text-decoration: none;
-    color: white;
+    color: rgb(7, 7, 3);
     margin: 0 15px;
     font-size: 1.2em;
 }
@@ -79,7 +79,7 @@ main {
 footer {
     text-align: center;
     background-color: #007BFF;
-    color: white;
+    color: rgb(216, 30, 30);
     padding: 10px 0;
     margin-top: 20px;
 }
