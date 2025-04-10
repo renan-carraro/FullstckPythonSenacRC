@@ -1,0 +1,38 @@
+.hero{
+    height: 20vh;
+    color: rgb(218, 76, 10);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, #203673, #000000);
+    color: aliceblue;
+    
+}
+.barra{
+    display: ruby-text;
+
+}
+ul{
+    display: flex;
+}
+
+.nav-item{
+    padding-right: 1rem;
+}
+.navbar{
+    width: revert-layer;
+    height: 100;
+    background:linear-gradient(0deg, #000000, #203673);
+}
+.card{
+    h5{height: 50px;
+      
+    }
+img{
+    height: 200px;
+    width: 200px;
+}
+}
