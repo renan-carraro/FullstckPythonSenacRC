@@ -20,7 +20,7 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link " href="inicio.html">Inicio</a></li>
                     <li class="nav-item"><a class="nav-link " href="#">Produto</a></li>
-                    <li class="nav-item"><a class="nav-link " href="#">Contato</a></li>
+                    <li class="nav-item"><a class="nav-link " href="contato.html">Contato</a></li>
                     <li class="nav-item"><a class="nav-link " href="#">Login</a></li>
                     <li class="nav-item"><a class="nav-link active" href="cadastro.html">Cadastro</a></li>
 
@@ -53,7 +53,7 @@
             
             <div class="mb-3">
                 <label for="role" class="form-label">Função:</label>
-                <input type="text" id="role" name="role" class="form-control" required placeholder="Digite sua função">
+                <input type="text" id="role" id="role" value="role_user" class="form-control" required placeholder="Digite sua função">
             </div>
 
             <div class="d-flex justify-content-between">
@@ -69,47 +69,47 @@
         <footer class="bg-dark text-white text-center py-5 ">
         <p class="mb-5"> 2025 RT Roupas. Todos os direitos reservados©</p>  
         </footer>
-    <script>
-       async function enviarCadastro(event){
-            event.preventDefault();
-
-            const dados = {
-
-                username: document.getElementById("username").value,
-                email: document.getElementById("email").value,
-                password: document.getElementById("password").value,
-                role: document.getElementById("role").value,
-
-            };
-            
-            try {
-            const response = await fetch("http://localhost:808/auth/register", {
-                method:"POST",
-
-                headers: {
-                    "Content-type":"application/json"
-                },
-
-                body: JSON.stringify(dados)
-
-             });
-
-             if(response.ok){
-                const resultado = await response.json();
-                alert("Cadastro enviado com sucesso!");
-                console.log("Resposta da api", resultado);
-             }else{
-                alert("Erro ao enviar cadastro", response);
-
+        <script>
+            async function enviarCadastro(event){
+                 event.preventDefault();
+     
+                 const dados = {
+     
+                     username: document.getElementById("username").value,
+                     email: document.getElementById("email").value,
+                     password: document.getElementById("password").value,
+                     role: document.getElementById("role").value,
+     
+                 };
+                 
+                 try {
+                 const response = await fetch("http://localhost:8081/auth/register", {
+                     method:"POST",
+     
+                     headers: {
+                         "Content-type":"application/json"
+                     },
+     
+                     body: JSON.stringify(dados)
+     
+                  });
+     
+                  if(response.ok){
+                     const resultado = await response.json();
+                     alert("Cadastro enviado com sucesso!");
+                     console.log("Resposta da api", resultado);
+                  }else{
+                     alert("Erro ao enviar cadastro", response);
+     
+                  }
+                 }catch(error){
+                     alert("Erro desconhecido!");
+                 }
+     
              }
-            }catch(error){
-                alert("Erro desconhecido!");
-            }
-
-        }
-
-        document.querySelector("form").addEventListener("submit", enviarCadastro);
-    </script>
-    
-</body>
-</html>
+     
+             document.querySelector("form").addEventListener("submit", enviarCadastro);
+         </script>
+         
+     </body>
+     </html>
