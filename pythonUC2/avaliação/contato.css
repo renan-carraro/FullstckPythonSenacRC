@@ -1,49 +1,5 @@
-.hero{
-    height: 20vh;
-    color: rgb(218, 76, 10);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(0deg, #203673, #000000);
-    color: aliceblue;
-    
-}
-.barra{
-    display: ruby-text;
-
-}
-ul{
-    display: flex;
-}
-
-.nav-item{
-    padding-right: 1rem;
-}
-.navbar{
-    width: revert-layer;
-    height: 100;
-    background:linear-gradient(0deg, #000000, #203673);
-}
-.card{
-    h5{height: 50px;
-      
-    }
-img{
-    height: 200px;
-    width: 200px;
-}
-}
-.nav-link{
-    colot
-}
-.logo{
-    border-radius: 50%;
-    width: 50px;
-}
-.body {
+/* Reset básico */
+body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
@@ -52,18 +8,18 @@ img{
     text-align: center;
 }
 
-.header {
+header {
     background-color: #1f65a7;
     padding: 20px;
     color: white;
 }
 
-.h1 {
+h1 {
     margin: 0;
     font-size: 2rem;
 }
 
-.main {
+main {
     padding: 20px;
 }
 
@@ -150,13 +106,4 @@ footer {
 
 .contact-form button:hover {
     background-color: #145a8d;
-}
-.container-fluidpy-5 {
-    background: linear-gradient(0deg, rgb(228, 221, 221), #e6dbdb6b);
-}
-.carousel{
-    img{height: 600px;}
-}
-.top{
-    display: flex;
 }
