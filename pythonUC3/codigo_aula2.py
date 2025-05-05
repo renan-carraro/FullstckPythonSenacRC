@@ -1,13 +1,7 @@
 import random  
 
 def jogo_da_forca():  
-palavras = {
-    "frutas": ["banana", "abacaxi", "morango", "uva", "laranja", "melancia", "manga", "pera", "kiwi", "coco"],
-    "animal": ["elefante", "cachorro", "gato", "tigre", "jacaré", "leão", "pato", "papagaio", "coelho", "rinoceronte"],
-    "pais": ["brasil", "argentina", "portugal", "japão", "canadá", "frança", "itália", "alemanha", "espanha", "méxico"],
-    "objeto": ["cadeira", "mesa", "relógio", "telefone", "lápis", "caneta", "carro", "bicicleta", "fogão", "espelho"],
-    "profissao": ["engenheiro", "médico", "professor", "advogado", "artista", "cozinheiro", "piloto", "jornalista", "bombeiro", "cientista"]
-}
+    palavras = ["banana", "abacaxi", "morango", "uva", "laranja", "melancia", "manga", "pera", "kiwi", "coco"]
 
     palavra_secreta = random.choice(palavras)  
     letras_corretas = set()  
