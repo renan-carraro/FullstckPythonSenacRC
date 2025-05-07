@@ -13,17 +13,20 @@ def jogo_da_forca():
     tentativas=6
     while tentativas > 0:
         #exibe dica pra palavra secreta
-        print(f"a dica é{lista_escolhida}")
+        categorias = ["Frutas", "Animais", "Países", "Objetos", "Profissões"]
+        indice_lista = listas.index(lista_escolhida)
+        print(f"A dica é: {categorias[indice_lista]}")
+
         
         #exibe a palavra com os caracteres descobertos.
-        palavra_exibida="".join(letra if letra in letras_corretas else"_"for letra in palavra_secreta)
+        palavra_exibida = " ".join(letra if letra in letras_corretas else "_" for letra in palavra_secreta)
         print("\npalavra: ",palavra_exibida)
         #caso a vitoria
         if palavra_exibida == palavra_secreta:
             print("parabéns! você venceu!")
             return
         #tentativa pra palavra ser completada
-        resposta=input("ser quiser digite a palavra inteira ou pressione enter pra adinhar a letra").strip().lower()
+        resposta = input("Digite a palavra inteira ou pressione Enter para tentar adivinhar uma letra: ").strip().lower()
         if resposta:
             if resposta == palavra_secreta:
                 print("Parabéns! Você acertou a palavra!")
@@ -42,9 +45,10 @@ def jogo_da_forca():
             print("letra correta!")
         else:
             tentativas -= 1
-            print(f"GAME OVER! A palavra era:{palavra_secreta}")
+            print(f"letra incorreta! tentativas restantes: {tentativas}")
+    print(f"GAME OVER! A palavra era:{palavra_secreta}")
             
-    jogo_da_forca
+    jogo_da_forca()
 
     #print("lista sorteada:",palavra_secreta)
 
