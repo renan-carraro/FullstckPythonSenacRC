@@ -1,12 +1,12 @@
 import random
 def jogo_da_forca():
-    frutas = ["banana", "abacaxi", "morango", "uva", "laranja", "melancia", "manga", "pera", "kiwi", "coco"]
-    animal=["elefante", "cachorro", "gato", "tigre", "jacaré", "leão", "pato", "papagaio", "coelho", "rinoceronte"]
-    pais=["brasil", "argentina", "portugal", "japão", "canadá", "frança", "itália", "alemanha", "espanha", "méxico"]
-    objeto=["cadeira", "mesa", "relógio", "telefone", "lápis", "caneta", "carro", "bicicleta", "fogão", "espelho"]
-    profisao=["engenheiro", "médico", "professor", "advogado", "artista", "cozinheiro", "piloto", "jornalista", "bombeiro", "cientista"]
+    Frutas = ["banana", "abacaxi", "morango", "uva", "laranja", "melancia", "manga", "pera", "kiwi", "coco"]
+    Animais=["elefante", "cachorro", "gato", "tigre", "jacaré", "leão", "pato", "papagaio", "coelho", "rinoceronte"]
+    Países=["brasil", "argentina", "portugal", "japão", "canadá", "frança", "itália", "alemanha", "espanha", "méxico"]
+    Objetos=["cadeira", "mesa", "relógio", "telefone", "lápis", "caneta", "carro", "bicicleta", "fogão", "espelho"]
+    Profissões=["engenheiro", "médico", "professor", "advogado", "artista", "cozinheiro", "piloto", "jornalista", "bombeiro", "cientista"]
 
-    listas=[frutas,animal,pais,objeto,profisao]
+    listas=[Frutas, Animais, Países, Objetos, Profissões]
     lista_escolhida=random.choice(listas)
     palavra_secreta=random.choice(lista_escolhida)
     letras_corretas=set()
