@@ -1,21 +1,13 @@
 import random  
 
 def jogo_da_forca():  
+    palavras = ["banana", "abacaxi", "morango", "uva", "laranja", "melancia", "manga", "pera", "kiwi", "coco"]
 
-frutas= ["banana", "abacaxi", "morango", "uva", "laranja", "melancia", "manga", "pera", "kiwi", "coco"]
-animal=["elefante", "cachorro", "gato", "tigre", "jacaré", "leão", "pato", "papagaio", "coelho", "rinoceronte"]
-pais=["brasil", "argentina", "portugal", "japão", "canadá", "frança", "itália", "alemanha", "espanha", "méxico"]
-objeto=["cadeira", "mesa", "relógio", "telefone", "lápis", "caneta", "carro", "bicicleta", "fogão", "espelho"]
-profisao=["engenheiro", "médico", "professor", "advogado", "artista", "cozinheiro", "piloto", "jornalista", "bombeiro", "cientista"]
-    #print(list(palavras.keys()))
+    palavra_secreta = random.choice(palavras)  
+    letras_corretas = set()  
+    tentativas = 6  
 
-listas=[frutas,animal,pais,objeto,profisao]
-lista_escolhida=random.choice(listas)
-palavra_secreta=random.choice(lista_escolhida)
-letras_corretas = set()  
-tentativas = 6  
-
-while tentativas > 0:  
+    while tentativas > 0:  
         # Exibe a palavra com os caracteres descobertos
         palavra_exibida = "".join(letra if letra in letras_corretas else "_" for letra in palavra_secreta)  
         print("\nPalavra: ", palavra_exibida)  
@@ -54,6 +46,6 @@ while tentativas > 0:
             tentativas -= 1  
             print(f"Letra incorreta! Tentativas restantes: {tentativas}")  
 
-print(f"Game over! A palavra era: {palavra_secreta}")  
+    print(f"Game over! A palavra era: {palavra_secreta}")  
 
 jogo_da_forca()
