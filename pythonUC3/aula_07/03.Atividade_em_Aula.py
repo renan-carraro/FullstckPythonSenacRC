@@ -65,14 +65,14 @@ class Biblioteca:
 # Exemplo de uso
 biblioteca = Biblioteca()
 livro1 = Livro("O Senhor dos Anéis", "J.R.R Tolkien", "Fantasia")
-livro2 = Livro("Harry Potter", "J.K Rowling", "Fantasia")
+livro2 = Livro("lupam", "Leblanc", "Fantasia")
 
 biblioteca.adicionar_livro(livro1)
 biblioteca.adicionar_livro(livro2)
 
 biblioteca.cadastrar_usuario("rc")
 
-print(biblioteca.emprestar_livro("rc", "Harry Potter"))
+print(biblioteca.emprestar_livro("rc", "lupam"))
 print(biblioteca.listar_livros_disponiveis())
-print(biblioteca.devolver_livro("rc", "lupan"))
+print(biblioteca.devolver_livro("rc", "lupam"))
 print(biblioteca.listar_livros_disponiveis())

@@ -11,11 +11,12 @@ def jogo_da_forca():
     palavra_secreta=random.choice(lista_escolhida)
     letras_corretas=set()
     tentativas=6
+    print("lista sorteada:",palavra_secreta)
     while tentativas > 0:
         #exibe dica pra palavra secreta
-        categorias = ["Frutas", "Animais", "Países", "Objetos", "Profissões"]
+        #categorias = ["Frutas", "Animais", "Países", "Objetos", "Profissões"]
         indice_lista = listas.index(lista_escolhida)
-        print(f"A dica é: {categorias[indice_lista]}")
+        print(f"A dica é: {lista_escolhida}")
 
         
         #exibe a palavra com os caracteres descobertos.
