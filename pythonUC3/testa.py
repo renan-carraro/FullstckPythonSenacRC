@@ -11,7 +11,6 @@ def jogo_da_forca():
     palavra_secreta=random.choice(lista_escolhida)
     letras_corretas=set()
     tentativas=6
-    print("lista sorteada:",palavra_secreta)
     while tentativas > 0:
         #exibe dica pra palavra secreta
         #categorias = ["Frutas", "Animais", "Países", "Objetos", "Profissões"]
