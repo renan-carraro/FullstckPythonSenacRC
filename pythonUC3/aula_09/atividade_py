@@ -1,0 +1,38 @@
+from abc import ABC, abstractmethod
+
+class Animal(ABC):
+    @abstractmethod
+    def fazer_som(self):
+        pass
+
+class Cachorro(Animal):
+    def fazer_som(self):
+        return "Au au!"
+
+    def buscar_bola(self):
+        return "O cachorro correu para buscar a bola!"
+
+    def abanar_rabo(self):
+        return "O cachorro está abanando o rabo animadamente!"
+
+class Gato(Animal):
+    def fazer_som(self):
+        return "Miau!"
+
+    def arranhar(self):
+        return "O gato está arranhando o sofá!"
+
+    def pular_alto(self):
+        return "O gato deu um salto impressionante!"
+
+# Testando as classes
+dog = Cachorro()
+cat = Gato()
+
+print(dog.fazer_som())  # "Au au!"
+print(dog.buscar_bola())  # "O cachorro correu para buscar a bola!"
+print(dog.abanar_rabo())  # "O cachorro está abanando o rabo animadamente!"
+
+print(cat.fazer_som())  # "Miau!"
+print(cat.arranhar())  # "O gato está arranhando o sofá!"
+print(cat.pular_alto())  # "O gato deu um salto impressionante!"
